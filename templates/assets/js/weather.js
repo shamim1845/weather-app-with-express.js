@@ -19,7 +19,7 @@ const getData = async (event) => {
     data_hide.classList.add("data_hide");
   } else {
     try{
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=be67fada588f5e5c609485aeea7da880`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&units=metric&appid=be67fada588f5e5c609485aeea7da880`;
     const data = await fetch(url);
     const response = await data.json();
     const arrData = [response];
@@ -51,12 +51,13 @@ let date = new Date();
 let days = date.getDay();
 
 let dateArr = [
-  "Sunday",
+   "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
+  "Saturday",
 ];
 let monthArr = [
   "Jan",
